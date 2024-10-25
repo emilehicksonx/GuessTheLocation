@@ -32,6 +32,7 @@ function checkAnswerOne() {
         document.getElementById("input-one").placeholder = "Second Guess...";
         document.getElementById("input-one").id = "input-two";
         document.getElementById("guess-button").onclick = checkAnswerTwo;
+        document.getElementById("input-two").value = "";
         guessCount ++;
     }
 }
@@ -55,6 +56,7 @@ function checkAnswerTwo() {
         document.getElementById("input-two").placeholder = "Third Guess...";
         document.getElementById("input-two").id = "input-three";
         document.getElementById("guess-button").onclick = checkAnswerThree;
+        document.getElementById("input-three").value = "";
         guessCount ++;
     }
 }
@@ -78,6 +80,7 @@ function checkAnswerThree() {
         document.getElementById("input-three").placeholder = "Fourth Guess...";
         document.getElementById("input-three").id = "input-four";
         document.getElementById("guess-button").onclick = checkAnswerFour;
+        document.getElementById("input-four").value = "";
         guessCount ++;
     }
 }
@@ -101,6 +104,7 @@ function checkAnswerFour() {
         document.getElementById("input-four").placeholder = "Final Guess...";
         document.getElementById("input-four").id = "input-five";
         document.getElementById("guess-button").onclick = checkAnswerFive;
+        document.getElementById("input-five").value = "";
         guessCount ++;
     }
 }
