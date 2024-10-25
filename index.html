@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Location Daily Puzzle</title>
+    <style>
+        body {
+            background-color: #F5F5F5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3, p {
+            color: #333232;
+        }
+        input, button {
+            border: 2px solid #333232;
+            border-radius: 15px;
+            background-color: #F5F5F5;
+            padding: 12px 20px;
+            color: #333232;
+            font-size: large;
+        }
+        .title-elements {
+            text-align: center;
+        }
+        .clue-counter {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            text-align: center;
+            justify-content: center;
+        }
+        #play-button {
+            display: block;
+            margin: auto;
+            margin-top: 100px;
+            font-size: xx-large;
+        }
+        .clue-box {
+            width: 50%;
+            height: auto;
+            border: 2px solid yellow;
+            background: rgb(255, 255, 0, .5);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        }
+        .win-box {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title-elements" id="date-text"></h1>
+    <h1 class="title-elements">Guess The Location Daily Puzzle</h1>
+    <h3 class="title-elements">Continents, countries, capitals, cities, famous places, etc.</h3>
+    <div style="visibility: hidden;" class="clue-counter" id="counters">
+        <h2 id="clue-guess-one" style="margin-right:10px;">⬛️</h2>
+        <h2 id="clue-guess-two" style="margin-right:10px;">⬛️</h2>
+        <h2 id="clue-guess-three" style="margin-right:10px;">⬛️</h2>
+        <h2 id="clue-guess-four" style="margin-right:10px;">⬛️</h2>
+        <h2 id="clue-guess-five" style="margin-right:10px;">⬛️</h2>
+    </div>
+    <div class="win-box" id="win-box" style="display: none;">
+        <h1>Congrats you got it!</h1>
+        <button style="display: block; margin: auto; font-size: xx-large;" onclick="copyResults()">Share results</button>
+        <h2>See you back here tomorrow.</h2>
+        <p>Game designed by Emile H</p>
+    </div>
+
+    
+    <div style="visibility: hidden;" class="clue-counter" id="guess-field">
+    <input style="margin: 10px; flex: 1;" type="text" id="input-one" placeholder="First guess..."></input>
+    <button style="margin-right: 10px; display: none;" onclick="checkAnswerOne()" id="guess-button">Guess</button>
+    </div>
+    <button id="play-button" onclick="playTheGame()">Play</button>
+
+    <div style="display: none;" class="clue-box" id="clue-box-one">
+        <h2 style="margin: 10px; margin-left: 50px; flex: 1;">Clue One</h2>
+        <h3 style="flex: 1;">Locals use the Country Code +962</h3>
+    </div>
+    <div style="display: none;" class="clue-box" id="clue-box-two">
+        <h2 style="margin: 10px; margin-left: 50px; flex: 1;">Clue Two</h2>
+        <h3 style="flex: 1;">Shady homes</h3>
+    </div>
+    <div style="display: none;" class="clue-box" id="clue-box-three">
+        <h2 style="margin: 10px; margin-left: 50px; flex: 1;">Clue Three</h2>
+        <h3 style="flex: 1;">Next to the Valley of Moses</h3>
+    </div>
+    <div style="display: none;" class="clue-box" id="clue-box-four">
+        <h2 style="margin: 10px; margin-left: 50px; flex: 1;">Clue Four</h2>
+        <h3 style="flex: 1;">A “rose-red city half as old as Time”</h3>
+    </div>
+    <div style="display: none;" class="clue-box" id="clue-box-five">
+        <h2 style="margin: 10px; margin-left: 50px; flex: 1;">Clue Five</h2>
+        <h3 style="flex: 1;">Famous city carved in to sandstone in Jordan</h3>
+    </div>
+    <textarea style="display: none;" id="share-text"></textarea>
+
+    <script src="script.js"></script>
+</body>
+</html>
