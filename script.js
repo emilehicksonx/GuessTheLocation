@@ -19,6 +19,7 @@ function checkAnswerOne() {
         document.getElementById("clue-box-one").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-one").innerText = "🟩";
         document.getElementById("input-one").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
         document.getElementById("clue-box-one").style.background = "rgb(255, 0, 0, .3)";
@@ -40,6 +41,7 @@ function checkAnswerTwo() {
         document.getElementById("clue-box-two").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-two").innerText = "🟩";
         document.getElementById("input-two").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
         document.getElementById("clue-box-two").style.background = "rgb(255, 0, 0, .3)";
@@ -61,6 +63,7 @@ function checkAnswerThree() {
         document.getElementById("clue-box-three").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-three").innerText = "🟩";
         document.getElementById("input-three").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
 
@@ -83,6 +86,7 @@ function checkAnswerFour() {
         document.getElementById("clue-box-four").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-four").innerText = "🟩";
         document.getElementById("input-four").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
         document.getElementById("clue-box-four").style.background = "rgb(255, 0, 0, .3)";
@@ -105,10 +109,15 @@ function checkAnswerFive() {
         document.getElementById("clue-box-five").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-five").innerText = "🟩";
         document.getElementById("input-five").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
         document.getElementById("clue-box-five").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-guess-five").innerText = "🟥";
+        document.getElementById("input-five").style.display = "none";
+        document.getElementById("guess-button").style.display = "none";
+        document.getElementById("end-message").innerText = "The answer was " + answer.charAt(0).toUpperCase() + answer.slice(1) + ".";
+        document.getElementById("win-box").style.display = "initial";
     }
 }
 
@@ -129,14 +138,14 @@ function copyResults() {
         gridText = "🟥🟥🟥🟥🟥";
     }
 
-    let copyCopy = "Guess The Location\n#1 - " + guessCount.toString() + "/5\n\n" + gridText + "\n\nPlay Guess The Location at:\nxx";
+    let copyCopy = "Guess The Location\n#1 - " + guessCount.toString() + "/5\n\n" + gridText + "\n\nPlay Guess The Location at:\nhttps://emilehicksonx.github.io/GuessTheLocation/";
     document.getElementById("share-text").innerHTML = copyCopy;
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard
       .writeText(copyText.value)
       .then(() => {
-        alert("Result copied to clipboard. Paste it into a message!");
+        alert("Result copied to clipboard");
       })
       .catch(() => {
         alert("something went wrong");
@@ -145,7 +154,6 @@ function copyResults() {
 
 let answer = "petra";
 let guessCount = 1;
-
 
 document.getElementById("date-text").textContent = findDate();
 var input = document.getElementById("input-one");
