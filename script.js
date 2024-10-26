@@ -16,16 +16,13 @@ function playTheGame() {
 function checkAnswerOne() {
     var x = document.getElementById("input-one").value;
     if (x.toLowerCase() == answer) {
-        document.getElementById("clue-box-one").style.border = "2px solid green";
         document.getElementById("clue-box-one").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-one").innerText = "🟩";
         document.getElementById("input-one").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
-        document.getElementById("clue-box-one").style.border = "2px solid red";
         document.getElementById("clue-box-one").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-box-two").style.display = "flex";
-        document.getElementById("clue-box-two").style.border = "2px solid yellow";
         document.getElementById("clue-box-two").style.background = "rgb(255, 255, 0, .3)";
         document.getElementById("clue-guess-one").innerText = "🟥";
         document.getElementById("clue-guess-two").innerText = "🟨";
@@ -40,16 +37,13 @@ function checkAnswerOne() {
 function checkAnswerTwo() {
     var x = document.getElementById("input-two").value;
     if (x.toLowerCase() == answer) {
-        document.getElementById("clue-box-two").style.border = "2px solid green";
         document.getElementById("clue-box-two").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-two").innerText = "🟩";
         document.getElementById("input-two").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
-        document.getElementById("clue-box-two").style.border = "2px solid red";
         document.getElementById("clue-box-two").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-box-three").style.display = "flex";
-        document.getElementById("clue-box-three").style.border = "2px solid yellow";
         document.getElementById("clue-box-three").style.background = "rgb(255, 255, 0, .3)";
         document.getElementById("clue-guess-two").innerText = "🟥";
         document.getElementById("clue-guess-three").innerText = "🟨";
@@ -64,16 +58,14 @@ function checkAnswerTwo() {
 function checkAnswerThree() {
     var x = document.getElementById("input-three").value;
     if (x.toLowerCase() == answer) {
-        document.getElementById("clue-box-three").style.border = "2px solid green";
         document.getElementById("clue-box-three").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-three").innerText = "🟩";
         document.getElementById("input-three").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
-        document.getElementById("clue-box-three").style.border = "2px solid red";
+
         document.getElementById("clue-box-three").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-box-four").style.display = "flex";
-        document.getElementById("clue-box-four").style.border = "2px solid yellow";
         document.getElementById("clue-box-four").style.background = "rgb(255, 255, 0, .3)";
         document.getElementById("clue-guess-three").innerText = "🟥";
         document.getElementById("clue-guess-four").innerText = "🟨";
@@ -88,16 +80,13 @@ function checkAnswerThree() {
 function checkAnswerFour() {
     var x = document.getElementById("input-four").value;
     if (x.toLowerCase() == answer) {
-        document.getElementById("clue-box-four").style.border = "2px solid green";
         document.getElementById("clue-box-four").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-four").innerText = "🟩";
         document.getElementById("input-four").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
-        document.getElementById("clue-box-four").style.border = "2px solid red";
         document.getElementById("clue-box-four").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-box-five").style.display = "flex";
-        document.getElementById("clue-box-five").style.border = "2px solid yellow";
         document.getElementById("clue-box-five").style.background = "rgb(255, 255, 0, .3)";
         document.getElementById("clue-guess-four").innerText = "🟥";
         document.getElementById("clue-guess-five").innerText = "🟨";
@@ -113,13 +102,11 @@ function checkAnswerFive() {
     var x = document.getElementById("input-five").value;
     document.getElementById("input-five").disabled = true;
     if (x.toLowerCase() == answer) {
-        document.getElementById("clue-box-five").style.border = "2px solid green";
         document.getElementById("clue-box-five").style.background = "rgb(12, 134, 12, .3)";
         document.getElementById("clue-guess-five").innerText = "🟩";
         document.getElementById("input-five").style.display = "none";
         document.getElementById("win-box").style.display = "initial";
     } else {
-        document.getElementById("clue-box-five").style.border = "2px solid red";
         document.getElementById("clue-box-five").style.background = "rgb(255, 0, 0, .3)";
         document.getElementById("clue-guess-five").innerText = "🟥";
     }
