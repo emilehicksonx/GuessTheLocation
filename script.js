@@ -136,7 +136,7 @@ function copyResults() {
     navigator.clipboard
       .writeText(copyText.value)
       .then(() => {
-        alert("Successfully Copied");
+        alert("Result copied to clipboard. Paste it into a message!");
       })
       .catch(() => {
         alert("something went wrong");
@@ -145,6 +145,7 @@ function copyResults() {
 
 let answer = "petra";
 let guessCount = 1;
+
 
 document.getElementById("date-text").textContent = findDate();
 var input = document.getElementById("input-one");
