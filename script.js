@@ -10,6 +10,14 @@ function findDate() {
         document.getElementById("clue-five").innerText = "Home of the mojito and Cuban cigar";
         answer = "Havana";
     };
+    if (days[d.getDay()] == "Sunday") {
+        document.getElementById("clue-one").innerText = "VICTIM OF THE MOORS";
+        document.getElementById("clue-two").innerText = "Once known as magerit";
+        document.getElementById("clue-three").innerText = "Home of the Prado";
+        document.getElementById("clue-four").innerText = "15 Champions League wins";
+        document.getElementById("clue-five").innerText = "Where the Spanish throne resides";
+        answer = "Madrid";
+    };
     return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()} 2024`;
     
 }
