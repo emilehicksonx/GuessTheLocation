@@ -146,7 +146,6 @@ function copyResults() {
 let answer = "petra";
 let guessCount = 1;
 
-
 document.getElementById("date-text").textContent = findDate();
 var input = document.getElementById("input-one");
 input.addEventListener("keypress", function(event) {
