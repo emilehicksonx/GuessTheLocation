@@ -2,8 +2,19 @@ function findDate() {
     const d = new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    if (days[d.getDay() + 1] == "Saturday") {
+        document.getElementById("clue-one").innerText = "Old Spanish Port";
+        document.getElementById("clue-two").innerText = "Something about a missile crisis?";
+        document.getElementById("clue-three").innerText = "Home of Ernesto Guevara";
+        document.getElementById("clue-four").innerText = "La Ciudad de las Columnas";
+        document.getElementById("clue-five").innerText = "Home of the mojito and Cuban cigar";
+        answer = "Havana";
+    };
     return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()} 2024`;
+    
 }
+
+
 
 function playTheGame() {
     document.getElementById("play-button").style.display = "none";
@@ -154,6 +165,7 @@ function copyResults() {
 
 let answer = "petra";
 let guessCount = 1;
+
 
 document.getElementById("date-text").textContent = findDate();
 var input = document.getElementById("input-one");
