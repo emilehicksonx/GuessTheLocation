@@ -2,11 +2,11 @@ function findDate() {
     const d = new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    if (days[d.getDay() + 1] == "Saturday") {
+    if (days[d.getDay()] == "Saturday") {
         document.getElementById("clue-one").innerText = "Old Spanish Port";
-        document.getElementById("clue-two").innerText = "Something about a missile crisis?";
+        document.getElementById("clue-two").innerText = "La Ciudad de las Columnas";
         document.getElementById("clue-three").innerText = "Home of Ernesto Guevara";
-        document.getElementById("clue-four").innerText = "La Ciudad de las Columnas";
+        document.getElementById("clue-four").innerText = "Something about a missile crisis?";
         document.getElementById("clue-five").innerText = "Home of the mojito and Cuban cigar";
         answer = "Havana";
     };
