@@ -2,13 +2,13 @@ function findDate() {
     const d = new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    if (days[d.getDay()] == "Saturday") {
-        document.getElementById("clue-one").innerText = "Old Spanish Port";
-        document.getElementById("clue-two").innerText = "La Ciudad de las Columnas";
-        document.getElementById("clue-three").innerText = "Home of Ernesto Guevara";
-        document.getElementById("clue-four").innerText = "Something about a missile crisis?";
-        document.getElementById("clue-five").innerText = "Home of the mojito and Cuban cigar";
-        answer = "Havana";
+    if (days[d.getDay()] == "Monday") {
+        document.getElementById("clue-one").innerText = "Opened in 1973";
+        document.getElementById("clue-two").innerText = "Right by the river and pretty close to the sea";
+        document.getElementById("clue-three").innerText = "Great accoustics";
+        document.getElementById("clue-four").innerText = "In NSW";
+        document.getElementById("clue-five").innerText = "A lot of singing down under";
+        answer = "Sydney Opera House";
     };
     if (days[d.getDay()] == "Sunday") {
         document.getElementById("clue-one").innerText = "VICTIM OF THE MOORS";
