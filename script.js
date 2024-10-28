@@ -8,7 +8,7 @@ function findDate() {
         document.getElementById("clue-three").innerText = "Great accoustics";
         document.getElementById("clue-four").innerText = "In NSW";
         document.getElementById("clue-five").innerText = "A lot of singing down under";
-        answer = "Sydney Opera House";
+        answer = "sydney opera house";
     };
     if (days[d.getDay()] == "Sunday") {
         document.getElementById("clue-one").innerText = "VICTIM OF THE MOORS";
