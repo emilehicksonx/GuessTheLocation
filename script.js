@@ -10,13 +10,13 @@ function findDate() {
         document.getElementById("clue-five").innerText = "A lot of singing down under";
         answer = "sydney opera house";
     };
-    if (days[d.getDay()] == "Sunday") {
-        document.getElementById("clue-one").innerText = "VICTIM OF THE MOORS";
-        document.getElementById("clue-two").innerText = "Once known as magerit";
-        document.getElementById("clue-three").innerText = "Home of the Prado";
-        document.getElementById("clue-four").innerText = "15 Champions League wins";
-        document.getElementById("clue-five").innerText = "Where the Spanish throne resides";
-        answer = "Madrid";
+    if (days[d.getDay()] == "Tuesday") {
+        document.getElementById("clue-one").innerText = "Nato-oh-siskoom";
+        document.getElementById("clue-two").innerText = "Made by the trains in the mountains";
+        document.getElementById("clue-three").innerText = "Named by a Scottsman after his home town";
+        document.getElementById("clue-four").innerText = "Home for many in the Canadian Rockies";
+        document.getElementById("clue-five").innerText = "Headquarters of the busiest national park in Canada";
+        answer = "Banff";
     };
     return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()} 2024`;
     
