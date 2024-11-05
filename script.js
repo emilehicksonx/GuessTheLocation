@@ -22,8 +22,6 @@ function findDate() {
     
 }
 
-
-
 function playTheGame() {
     document.getElementById("play-button").style.display = "none";
     document.getElementById("clue-box-one").style.display = "flex";
@@ -173,7 +171,6 @@ function copyResults() {
 
 let answer = "petra";
 let guessCount = 1;
-
 
 document.getElementById("date-text").textContent = findDate();
 var input = document.getElementById("input-one");
